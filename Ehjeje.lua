@@ -7783,10 +7783,6 @@ function Library:CreateWindow(WindowInfo)
             Library.CantDragForced = not Library.CantDragForced
             self:SetText(Library.CantDragForced and "Unlock" or "Lock")
         end)
-		New("ImageLabel", {
-			Image = "rbxassetid://10723434711",
-			Parent = ToggleButton.Button,
-									})
 		
         if WindowInfo.MobileButtonsSide == "Right" then
             ToggleButton.Button.Position = UDim2.new(1, -6, 0, 6)
