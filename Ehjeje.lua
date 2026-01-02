@@ -7778,13 +7778,15 @@ function Library:CreateWindow(WindowInfo)
         local ToggleButton = Library:AddDraggableButton("Toggle", function()
             Library:Toggle()
         end)
-
-    Library:AddImage(_,{Image = "rbxassetid:/10723434711/"})
     
         local LockButton = Library:AddDraggableButton("Lock", function(self)
             Library.CantDragForced = not Library.CantDragForced
             self:SetImage(Library.CantDragForced and "user" or "user")
         end)
+		New("ImageLabel", {
+			Image = "rbxassetid://10723434711",
+			Parent = ToggleButton.Button,
+									})
 		
         if WindowInfo.MobileButtonsSide == "Right" then
             ToggleButton.Button.Position = UDim2.new(1, -6, 0, 6)
