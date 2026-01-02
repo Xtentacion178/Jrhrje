@@ -7781,7 +7781,7 @@ function Library:CreateWindow(WindowInfo)
     
         local LockButton = Library:AddDraggableButton("Lock", function(self)
             Library.CantDragForced = not Library.CantDragForced
-            self:SetImage(Library.CantDragForced and "user" or "user")
+            self:SetText(Library.CantDragForced and "Unlock" or "Lock")
         end)
 		New("ImageLabel", {
 			Image = "rbxassetid://10723434711",
