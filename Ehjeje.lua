@@ -6334,8 +6334,7 @@ function Library:CreateWindow(WindowInfo)
         if WindowInfo.Icon then
             WindowIcon = New("ImageButton", {
                 Image = if tonumber(WindowInfo.Icon)
-                    then string.format("rbxassetid://%d", WindowInfo.Icon)
-                ImageColor3 = "AccentColor",                    else WindowInfo.Icon,
+                    then string.format("rbxassetid://%d", WindowInfo.Icon),ImageColor3 = "AccentColor", else WindowInfo.Icon,
                 Size = WindowInfo.IconSize,
                 BackgroundTransparency = 1,
                 Parent = TitleHolder,
